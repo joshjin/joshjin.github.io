@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    Backtracking Leetcode Summary, Part 2
+  
+</title>
+
+<meta name="description" content="Subsets Palindrome Combination Sum, repeated number used Combination Sum, unique number used  Subsets:Problem Description: Given a set of distinct integers, nums, return all possible subsets (the pow">
+<meta name="keywords" content="LeetCode,algorithm,java,backtrack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Backtracking Leetcode Summary, Part 2">
+<meta property="og:url" content="http://yoursite.com/2019/10/22/backtracking-summaries-1/index.html">
+<meta property="og:site_name" content="Zexi &quot;Josh&quot; Jin">
+<meta property="og:description" content="Subsets Palindrome Combination Sum, repeated number used Combination Sum, unique number used  Subsets:Problem Description: Given a set of distinct integers, nums, return all possible subsets (the pow">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-23T18:31:18.672Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Backtracking Leetcode Summary, Part 2">
+<meta name="twitter:description" content="Subsets Palindrome Combination Sum, repeated number used Combination Sum, unique number used  Subsets:Problem Description: Given a set of distinct integers, nums, return all possible subsets (the pow">
+
+
+  <link rel="alternative" href="/atom.xml" title="Zexi &#34;Josh&#34; Jin" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+</head>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Zexi &#34;Josh&#34; Jin</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Zexi &#34;Josh&#34; Jin</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">I am a current master at UPENN. This page serves as a record of my life. I may post study blogs, daily blogs, and personal opions. XD</div>
+        
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://i.ibb.co/XXV2FLb/Screen-Shot-2019-10-17-at-12-31-49-PM.png"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/backend/">backend</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/data-analysis/">data analysis</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/data-structure/">data structure</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/photos/">photos</a><span class="category-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/">LeetCode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backend/">backend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backtrack/">backtrack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-tree/">binary tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/concurrency/">concurrency</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/new-york/">new york</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/">pandas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/photos/">photos</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/roc-auc/">roc-auc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sorting/">sorting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travel/">travel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/traversal/">traversal</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="About">About</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-backtracking-summaries-1" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Backtracking Leetcode Summary, Part 2
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2019-10-22
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-structure/">data structure</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/backtrack/">backtrack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <ol>
+<li>Subsets</li>
+<li>Palindrome</li>
+<li>Combination Sum, repeated number used</li>
+<li>Combination Sum, unique number used</li>
+</ol>
+<h3 id="Subsets"><a href="#Subsets" class="headerlink" title="Subsets:"></a>Subsets:</h3><p><strong>Problem Description:</strong> Given a set of distinct integers, nums, return all possible subsets (the power set). Note: The solution set must not contain duplicate subsets.  </p>
+<p><strong>Few Key Points:</strong>  </p>
+<ul>
+<li>This algorithm is very close to that of permutation. The only difference is that this counts for subsets instead of permutations.</li>
+<li>One of the key point is to keep the order, don&#x2019;t permute like the permutation algorithm</li>
+</ul>
+<p><strong>Code:</strong><br>backtracking part, takes parameters:  </p>
+<ol>
+<li>result: LinkedList<arraylist<integer>&gt;</arraylist<integer></li>
+<li>current: ArrayList<integer></integer></li>
+<li>nums: nums to extract from</li>
+<li>cur_idx: current index  </li>
+</ol>
+<p>Note: when adding to result, convert the current list into a new list<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; l, </span></span></span><br><span class="line"><span class="function"><span class="params">                      List&lt;Integer&gt; tmpList, </span></span></span><br><span class="line"><span class="function"><span class="params">                      <span class="keyword">int</span> [] nums, </span></span></span><br><span class="line"><span class="function"><span class="params">                      <span class="keyword">int</span> start)</span> </span>{</span><br><span class="line">    l.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tmpList));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; nums.length; i++) {</span><br><span class="line">        tmpList.add(nums[i]);</span><br><span class="line">        backtrack(l, tmpList, nums, i+<span class="number">1</span>);</span><br><span class="line">        tmpList.remove(tmpList.size() - <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>The solution part:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsets(<span class="keyword">int</span>[] nums) {</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; tmp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">    backtrack(res, tmp, nums, start);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="Palindrome"><a href="#Palindrome" class="headerlink" title="Palindrome:"></a>Palindrome:</h3><p><strong>Problem Description:</strong> Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.<br>e.g.:<br>Input: &#x201C;aab&#x201D;<br>Output:<br>[[&#x201C;aa&#x201D;,&#x201D;b&#x201D;],<br>  [&#x201C;a&#x201D;,&#x201D;a&#x201D;,&#x201D;b&#x201D;]]</p>
+<p><strong>Few Key Points:</strong>  </p>
+<ul>
+<li>An utility function can be used to determine if str is palindrome or not.</li>
+</ul>
+<p><strong>Code:</strong><br>backtrack:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;String&gt;&gt; result, </span></span></span><br><span class="line"><span class="function"><span class="params">                      List&lt;String&gt; tmp, </span></span></span><br><span class="line"><span class="function"><span class="params">                      String str, </span></span></span><br><span class="line"><span class="function"><span class="params">                      <span class="keyword">int</span> index)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (index == str.length()) </span><br><span class="line">        result.add(<span class="keyword">new</span> ArrayList&lt;String&gt;(tmp));</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; str.length(); i++) {</span><br><span class="line">            <span class="keyword">if</span> (isPalindrome(str, index, i)) {</span><br><span class="line">                tmp.add(str.substring(index, i+<span class="number">1</span>));</span><br><span class="line">                backtrack(result, tmp, str, i+<span class="number">1</span>);</span><br><span class="line">                tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>Check if str is palindrome:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String str, <span class="keyword">int</span> s, <span class="keyword">int</span> e)</span> </span>{</span><br><span class="line">    <span class="keyword">while</span> (s &lt; e) {</span><br><span class="line">        <span class="keyword">if</span> (str.charAt(s++) != str.charAt(e--))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>The solution part:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; partition(String s) {</span><br><span class="line">    List&lt;List&lt;String&gt;&gt; res = <span class="keyword">new</span> LinkedList&lt;List&lt;String&gt;&gt;();</span><br><span class="line">    List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    <span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">    backtrack(res, list, s, idx);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="Combination-Sum-repeat-allowed"><a href="#Combination-Sum-repeat-allowed" class="headerlink" title="Combination Sum, repeat allowed"></a>Combination Sum, repeat allowed</h3><p><strong>Problem Description:</strong> Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times.<br>e.g.:<br>Input: candidates = [2,3,6,7], target = 7,<br>A solution set is:<br>[[7],<br>  [2,2,3]]  </p>
+<p><strong>Codes:</strong><br>backtrack:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, </span></span></span><br><span class="line"><span class="function"><span class="params">                 List&lt;Integer&gt; tmp, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span>[] cand, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span> rem, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span> cur)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (rem == <span class="number">0</span>) {</span><br><span class="line">        res.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(tmp));</span><br><span class="line">    } <span class="keyword">else</span> <span class="keyword">if</span> (rem &lt; <span class="number">0</span>) {</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = cur; i &lt; cand.length; i++) {</span><br><span class="line">            <span class="keyword">if</span> (rem &gt;= cand[i]) {</span><br><span class="line">                tmp.add(cand[i]);</span><br><span class="line">                backtrack(res, tmp, cand, rem - cand[i], i);</span><br><span class="line">                tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>The solution part:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum(<span class="keyword">int</span>[] candidates, <span class="keyword">int</span> target) {</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; tmp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">int</span> cur = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> rem = target;</span><br><span class="line">    Arrays.sort(candidates);</span><br><span class="line">    backtrack(res, tmp, candidates, rem, cur);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="Combination-Sum-no-repeats"><a href="#Combination-Sum-no-repeats" class="headerlink" title="Combination Sum, no repeats"></a>Combination Sum, no repeats</h3><p><strong>Problem Description:</strong> Same as combination sum, with only difference that each number can only be used once.  </p>
+<p><strong>Codes:</strong><br>backtrack: (added while loop to eliminate repeating results)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, </span></span></span><br><span class="line"><span class="function"><span class="params">                 List&lt;Integer&gt; tmp, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span>[] cand, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span> rem, </span></span></span><br><span class="line"><span class="function"><span class="params">                 <span class="keyword">int</span> cur)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (rem == <span class="number">0</span>) {</span><br><span class="line">        res.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(tmp));</span><br><span class="line">    } <span class="keyword">else</span> <span class="keyword">if</span> (rem &lt; <span class="number">0</span>) {</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = cur; i &lt; cand.length; i++) {</span><br><span class="line">            <span class="keyword">if</span> (rem &gt;= cand[i]) {</span><br><span class="line">                tmp.add(cand[i]);                    </span><br><span class="line">                backtrack(res, tmp, cand, rem - cand[i], i+<span class="number">1</span>);</span><br><span class="line">                tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">while</span> (i &lt; cand.length-<span class="number">1</span> &amp;&amp; cand[i] == cand[i+<span class="number">1</span>])</span><br><span class="line">                    i += <span class="number">1</span>;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>The solution part is the same as before. </p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.e" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2019 Zexi &#34;Josh&#34; Jin - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
